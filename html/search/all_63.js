@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['cts_5fnvm_5fbase_5faddress',['CTS_NVM_BASE_ADDRESS',['../_c_t_s___n_v_m__drv_8h.html#a7982520e9f2bcfad0f51ec43d29174d7',1,'CTS_NVM_drv.h']]],
+  ['cts_5fnvm_5fconfig_5finvalid',['CTS_NVM_CONFIG_INVALID',['../_c_t_s___n_v_m__drv_8h.html#a506158f2fa14a115f9aed9c92d7a9a0ca36b32242721575e3d1c82602317cd2f1',1,'CTS_NVM_drv.h']]],
+  ['cts_5fnvm_5fdata_5fbytes',['CTS_NVM_DATA_BYTES',['../_c_t_s___n_v_m__drv_8h.html#a681e721c09dc393bf0d26f27a7d1f04c',1,'CTS_NVM_drv.h']]],
+  ['cts_5fnvm_5fdrv_2ec',['CTS_NVM_drv.c',['../_c_t_s___n_v_m__drv_8c.html',1,'']]],
+  ['cts_5fnvm_5fdrv_2eh',['CTS_NVM_drv.h',['../_c_t_s___n_v_m__drv_8h.html',1,'']]],
+  ['cts_5fnvm_5ferr',['CTS_NVM_ERR',['../_c_t_s___n_v_m__drv_8h.html#a506158f2fa14a115f9aed9c92d7a9a0caca6076178ae059626a2d0c4c6689723f',1,'CTS_NVM_drv.h']]],
+  ['cts_5fnvm_5fforcestore',['CTS_NVM_ForceStore',['../_c_t_s___n_v_m__drv_8c.html#a5c1dc772df58d3ba2bf4f7a6b2ab18cb',1,'CTS_NVM_ForceStore(uint8_t *dataBuff, uint32_t dataLength):&#160;CTS_NVM_drv.c'],['../_c_t_s___n_v_m__drv_8h.html#a5c1dc772df58d3ba2bf4f7a6b2ab18cb',1,'CTS_NVM_ForceStore(uint8_t *dataBuff, uint32_t dataLength):&#160;CTS_NVM_drv.c']]],
+  ['cts_5fnvm_5fframe_5fbytes',['CTS_NVM_FRAME_BYTES',['../_c_t_s___n_v_m__drv_8h.html#a9c898b53a626b7faf89bf9339ad82d2b',1,'CTS_NVM_drv.h']]],
+  ['cts_5fnvm_5fframe_5ft',['cts_nvm_frame_t',['../structcts__nvm__frame__t.html',1,'cts_nvm_frame_t'],['../_c_t_s___n_v_m__drv_8h.html#a4d91e9df2eae4cb05ab9d80172c41a5c',1,'cts_nvm_frame_t():&#160;CTS_NVM_drv.h']]],
+  ['cts_5fnvm_5fgetcrc8',['CTS_NVM_GetCRC8',['../_c_t_s___n_v_m__drv_8c.html#aa4327d707697e6a222d6a5c2fc3e6846',1,'CTS_NVM_GetCRC8(uint8_t *data, uint8_t len):&#160;CTS_NVM_drv.c'],['../_c_t_s___n_v_m__drv_8h.html#aa4327d707697e6a222d6a5c2fc3e6846',1,'CTS_NVM_GetCRC8(uint8_t *data, uint8_t len):&#160;CTS_NVM_drv.c']]],
+  ['cts_5fnvm_5fhead_5ft',['cts_nvm_head_t',['../structcts__nvm__head__t.html',1,'cts_nvm_head_t'],['../_c_t_s___n_v_m__drv_8h.html#af48691081a38f4a37df84b3cf1fa5c31',1,'cts_nvm_head_t():&#160;CTS_NVM_drv.h']]],
+  ['cts_5fnvm_5fheader_5fbytes',['CTS_NVM_HEADER_BYTES',['../_c_t_s___n_v_m__drv_8h.html#a2a6fee5554cb9c780d70d560a695e83d',1,'CTS_NVM_drv.h']]],
+  ['cts_5fnvm_5fhw_5finit_5ffailed',['CTS_NVM_HW_INIT_FAILED',['../_c_t_s___n_v_m__drv_8h.html#a506158f2fa14a115f9aed9c92d7a9a0ca9e3a2b0b37c9a8529133228f0338573b',1,'CTS_NVM_drv.h']]],
+  ['cts_5fnvm_5finit',['CTS_NVM_Init',['../_c_t_s___n_v_m__drv_8c.html#a873d641556fc57e1bf0b0dcb09c0183d',1,'CTS_NVM_Init():&#160;CTS_NVM_drv.c'],['../_c_t_s___n_v_m__drv_8h.html#a873d641556fc57e1bf0b0dcb09c0183d',1,'CTS_NVM_Init():&#160;CTS_NVM_drv.c']]],
+  ['cts_5fnvm_5fload',['CTS_NVM_Load',['../_c_t_s___n_v_m__drv_8c.html#acaf7c5d5c6d252b41b2b43573aa7f395',1,'CTS_NVM_Load(uint8_t *destBuff, uint32_t length):&#160;CTS_NVM_drv.c'],['../_c_t_s___n_v_m__drv_8h.html#acaf7c5d5c6d252b41b2b43573aa7f395',1,'CTS_NVM_Load(uint8_t *destBuff, uint32_t length):&#160;CTS_NVM_drv.c']]],
+  ['cts_5fnvm_5fmax_5fcycles',['CTS_NVM_MAX_CYCLES',['../_c_t_s___n_v_m__drv_8h.html#a823b06f2e532dc65d496c914ef5d3906',1,'CTS_NVM_drv.h']]],
+  ['cts_5fnvm_5fok',['CTS_NVM_OK',['../_c_t_s___n_v_m__drv_8h.html#a506158f2fa14a115f9aed9c92d7a9a0cab62b15600cda0587bcc37eeff547f6b0',1,'CTS_NVM_drv.h']]],
+  ['cts_5fnvm_5fpage_5fexpired',['CTS_NVM_PAGE_EXPIRED',['../_c_t_s___n_v_m__drv_8h.html#a506158f2fa14a115f9aed9c92d7a9a0ca249797d531f329b6de8acf5d89d42b5c',1,'CTS_NVM_drv.h']]],
+  ['cts_5fnvm_5fpage_5finvalid',['CTS_NVM_PAGE_INVALID',['../_c_t_s___n_v_m__drv_8h.html#a506158f2fa14a115f9aed9c92d7a9a0caab40a34945d062e7a25eeea1d1c34923',1,'CTS_NVM_drv.h']]],
+  ['cts_5fnvm_5fread_5ffailed',['CTS_NVM_READ_FAILED',['../_c_t_s___n_v_m__drv_8h.html#a506158f2fa14a115f9aed9c92d7a9a0caaabaf076d8d471338c79d89f81565aa0',1,'CTS_NVM_drv.h']]],
+  ['cts_5fnvm_5fret_5ft',['cts_nvm_ret_t',['../_c_t_s___n_v_m__drv_8h.html#a506158f2fa14a115f9aed9c92d7a9a0c',1,'cts_nvm_ret_t():&#160;CTS_NVM_drv.h'],['../_c_t_s___n_v_m__drv_8h.html#a71639dcb2bb29f7b92358e15ba475e69',1,'cts_nvm_ret_t():&#160;CTS_NVM_drv.h']]],
+  ['cts_5fnvm_5fstore',['CTS_NVM_Store',['../_c_t_s___n_v_m__drv_8c.html#aa42c7fb5235e46684ba687df8b781a60',1,'CTS_NVM_Store(uint8_t *srcBuff, uint32_t dataLength):&#160;CTS_NVM_drv.c'],['../_c_t_s___n_v_m__drv_8h.html#a83e1f7b35010605a4642b2bb92c235ab',1,'CTS_NVM_Store(uint8_t *srcBuff, uint32_t length):&#160;CTS_NVM_drv.c']]],
+  ['cts_5fnvm_5fwrite_5ffailed',['CTS_NVM_WRITE_FAILED',['../_c_t_s___n_v_m__drv_8h.html#a506158f2fa14a115f9aed9c92d7a9a0caa4eac4069d524fb36d820f1e1dc1f812',1,'CTS_NVM_drv.h']]]
+];

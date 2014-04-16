@@ -1,0 +1,328 @@
+ELF Header:
+  Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF32
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              EXEC (Executable file)
+  Machine:                           ARM
+  Version:                           0x1
+  Entry point address:               0x80017dd
+  Start of program headers:          52 (bytes into file)
+  Start of section headers:          192436 (bytes into file)
+  Flags:                             0x5000002, has entry point, Version5 EABI
+  Size of this header:               52 (bytes)
+  Size of program headers:           32 (bytes)
+  Number of program headers:         3
+  Size of section headers:           40 (bytes)
+  Number of section headers:         14
+  Section header string table index: 11
+
+Section Headers:
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .isr_vector       PROGBITS        08000000 008000 0000c4 00   A  0   0  1
+  [ 2] .text             PROGBITS        080000c4 0080c4 001798 00  AX  0   0  4
+  [ 3] .cts_config       PROGBITS        0800fc00 017c00 000200 00  WA  0   0  4
+  [ 4] .data             PROGBITS        20000000 010000 000018 00  WA  0   0  4
+  [ 5] .bss              NOBITS          20000018 010018 00026c 00  WA  0   0  4
+  [ 6] .stab             PROGBITS        00000000 017e00 007104 0c      7   0  4
+  [ 7] .stabstr          STRTAB          00000000 01ef04 00ff72 00      0   0  1
+  [ 8] .comment          PROGBITS        00000000 02ee76 000070 01  MS  0   0  1
+  [ 9] .ARM.attributes   ARM_ATTRIBUTES  00000000 02eee6 00002f 00      0   0  1
+  [10] .debug_frame      PROGBITS        00000000 02ef18 000020 00      0   0  4
+  [11] .shstrtab         STRTAB          00000000 02ef38 000079 00      0   0  1
+  [12] .symtab           SYMTAB          00000000 02f1e4 000f90 10     13 146  4
+  [13] .strtab           STRTAB          00000000 030174 000880 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings)
+  I (info), L (link order), G (group), T (TLS), E (exclude), x (unknown)
+  O (extra OS processing required) o (OS specific), p (processor specific)
+
+There are no section groups in this file.
+
+Program Headers:
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+  LOAD           0x008000 0x08000000 0x08000000 0x0185c 0x0185c R E 0x8000
+  LOAD           0x010000 0x20000000 0x0800185c 0x00018 0x00284 RW  0x8000
+  LOAD           0x017c00 0x0800fc00 0x0800fc00 0x00200 0x00200 RW  0x8000
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     .isr_vector .text 
+   01     .data .bss 
+   02     .cts_config 
+
+There is no dynamic section in this file.
+
+There are no relocations in this file.
+
+There are no unwind sections in this file.
+
+Symbol table '.symtab' contains 249 entries:
+   Num:    Value  Size Type    Bind   Vis      Ndx Name
+     0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 08000000     0 SECTION LOCAL  DEFAULT    1 
+     2: 080000c4     0 SECTION LOCAL  DEFAULT    2 
+     3: 0800fc00     0 SECTION LOCAL  DEFAULT    3 
+     4: 20000000     0 SECTION LOCAL  DEFAULT    4 
+     5: 20000018     0 SECTION LOCAL  DEFAULT    5 
+     6: 00000000     0 SECTION LOCAL  DEFAULT    6 
+     7: 00000000     0 SECTION LOCAL  DEFAULT    7 
+     8: 00000000     0 SECTION LOCAL  DEFAULT    8 
+     9: 00000000     0 SECTION LOCAL  DEFAULT    9 
+    10: 00000000     0 SECTION LOCAL  DEFAULT   10 
+    11: 00000000     0 FILE    LOCAL  DEFAULT  ABS Build/startup_stm32f0xx.o
+    12: f108f85f     0 NOTYPE  LOCAL  DEFAULT  ABS BootRAM
+    13: 080017dc     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    14: 080017ec     0 NOTYPE  LOCAL  DEFAULT    2 LoopCopyDataInit
+    15: 080017e4     0 NOTYPE  LOCAL  DEFAULT    2 CopyDataInit
+    16: 08001800     0 NOTYPE  LOCAL  DEFAULT    2 LoopFillZerobss
+    17: 080017fa     0 NOTYPE  LOCAL  DEFAULT    2 FillZerobss
+    18: 0800180e     0 NOTYPE  LOCAL  DEFAULT    2 LoopForever
+    19: 08001828     0 NOTYPE  LOCAL  DEFAULT    2 Infinite_Loop
+    20: 08001828     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    21: 08001810     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    22: 00000000     0 FILE    LOCAL  DEFAULT  ABS _udivsi3.o
+    23: 080000c4     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    24: 080000c8     0 NOTYPE  LOCAL  DEFAULT    2 .udivsi3_skip_div0_test
+    25: 00000010     0 NOTYPE  LOCAL  DEFAULT   10 $d
+    26: 08000148     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    27: 0800014c     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    28: 00000000     0 FILE    LOCAL  DEFAULT  ABS _dvmd_tls.o
+    29: 08000160     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    30: 00000000     0 FILE    LOCAL  DEFAULT  ABS hw_DAC_STM32F05xx_drv.c
+    31: 08000164     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    32: 00000000     0 FILE    LOCAL  DEFAULT  ABS hw_GPIO_Touch_STM32F05xx_
+    33: 080001d0     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    34: 08000244     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    35: 00000000     0 FILE    LOCAL  DEFAULT  ABS RS232_drv.c
+    36: 08000258     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    37: 080002e0     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    38: 080002fc     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    39: 08000418     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    40: 0800042c     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    41: 080004ec     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    42: 080004fc     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    43: 08000548     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    44: 0800054c     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    45: 080005a0     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    46: 00000000     0 FILE    LOCAL  DEFAULT  ABS hw_RS232_drv.c
+    47: 20000000     0 NOTYPE  LOCAL  DEFAULT    4 $d
+    48: 080005b0     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    49: 0800065c     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    50: 08000660     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    51: 08000740     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    52: 08000744     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    53: 080007a0     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    54: 080007b4     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    55: 08000808     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    56: 00000000     0 FILE    LOCAL  DEFAULT  ABS SYSTIME_drv.c
+    57: 20000018     0 NOTYPE  LOCAL  DEFAULT    5 $d
+    58: 20000018    48 OBJECT  LOCAL  DEFAULT    5 g_timeouts
+    59: 20000048     0 NOTYPE  LOCAL  DEFAULT    5 $d
+    60: 20000048     4 OBJECT  LOCAL  DEFAULT    5 g_sys_time
+    61: 08000820     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    62: 08000838     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    63: 08000840     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    64: 0800086c     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    65: 08000870     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    66: 080008e4     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    67: 080008ec     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    68: 08000944     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    69: 0800094c     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    70: 08000960     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    71: 00000000     0 FILE    LOCAL  DEFAULT  ABS hw_SYSTIME_drv.c
+    72: 08000964     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    73: 08000965   224 FUNC    LOCAL  DEFAULT    2 NVIC_SetPriority
+    74: 08000a3c     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    75: 08000a44     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    76: 08000a88     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    77: 08000a94     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    78: 08000aa4     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    79: 00000000     0 FILE    LOCAL  DEFAULT  ABS stm32f0xx_dac.c
+    80: 08000aa8     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    81: 08000afc     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    82: 08000b00     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    83: 08000b48     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    84: 08000b4c     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    85: 08000b7c     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    86: 08000b80     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    87: 08000bac     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    88: 00000000     0 FILE    LOCAL  DEFAULT  ABS stm32f0xx_gpio.c
+    89: 08000bb0     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    90: 08000ce8     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    91: 08000d00     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    92: 00000000     0 FILE    LOCAL  DEFAULT  ABS stm32f0xx_misc.c
+    93: 08000d9c     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    94: 08000e44     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    95: 00000000     0 FILE    LOCAL  DEFAULT  ABS stm32f0xx_rcc.c
+    96: 20000004     0 NOTYPE  LOCAL  DEFAULT    4 $d
+    97: 20000004    16 OBJECT  LOCAL  DEFAULT    4 APBAHBPrescTable
+    98: 08000e48     0 NOTYPE  LOCAL  DEFAULT    2 $t
+    99: 08000ffc     0 NOTYPE  LOCAL  DEFAULT    2 $d
+   100: 08001014     0 NOTYPE  LOCAL  DEFAULT    2 $t
+   101: 0800104c     0 NOTYPE  LOCAL  DEFAULT    2 $d
+   102: 08001050     0 NOTYPE  LOCAL  DEFAULT    2 $t
+   103: 08001088     0 NOTYPE  LOCAL  DEFAULT    2 $d
+   104: 0800108c     0 NOTYPE  LOCAL  DEFAULT    2 $t
+   105: 080010c4     0 NOTYPE  LOCAL  DEFAULT    2 $d
+   106: 00000000     0 FILE    LOCAL  DEFAULT  ABS stm32f0xx_usart.c
+   107: 080010c8     0 NOTYPE  LOCAL  DEFAULT    2 $t
+   108: 08001214     0 NOTYPE  LOCAL  DEFAULT    2 $d
+   109: 08001228     0 NOTYPE  LOCAL  DEFAULT    2 $t
+   110: 080012ac     0 NOTYPE  LOCAL  DEFAULT    2 $t
+   111: 00000000     0 FILE    LOCAL  DEFAULT  ABS system_stm32f0xx.c
+   112: 20000014     0 NOTYPE  LOCAL  DEFAULT    4 $d
+   113: 08001360     0 NOTYPE  LOCAL  DEFAULT    2 $t
+   114: 080013ed   136 FUNC    LOCAL  DEFAULT    2 SetSysClock
+   115: 080013d4     0 NOTYPE  LOCAL  DEFAULT    2 $d
+   116: 080013ec     0 NOTYPE  LOCAL  DEFAULT    2 $t
+   117: 08001468     0 NOTYPE  LOCAL  DEFAULT    2 $d
+   118: 00000000     0 FILE    LOCAL  DEFAULT  ABS TERM_Lib.c
+   119: 08001474     0 NOTYPE  LOCAL  DEFAULT    2 $t
+   120: 08001488     0 NOTYPE  LOCAL  DEFAULT    2 $d
+   121: 0800148c     0 NOTYPE  LOCAL  DEFAULT    2 $t
+   122: 080014ec     0 NOTYPE  LOCAL  DEFAULT    2 $d
+   123: 0800182c     0 NOTYPE  LOCAL  DEFAULT    2 $d
+   124: 080014f0     0 NOTYPE  LOCAL  DEFAULT    2 $t
+   125: 08001510     0 NOTYPE  LOCAL  DEFAULT    2 $d
+   126: 08001514     0 NOTYPE  LOCAL  DEFAULT    2 $t
+   127: 08001594     0 NOTYPE  LOCAL  DEFAULT    2 $d
+   128: 00000000     0 FILE    LOCAL  DEFAULT  ABS Main.c
+   129: 08001840     0 NOTYPE  LOCAL  DEFAULT    2 $d
+   130: 08001598     0 NOTYPE  LOCAL  DEFAULT    2 $t
+   131: 080016dc     0 NOTYPE  LOCAL  DEFAULT    2 $d
+   132: 080016fc     0 NOTYPE  LOCAL  DEFAULT    2 $t
+   133: 08001718     0 NOTYPE  LOCAL  DEFAULT    2 $t
+   134: 080017a4     0 NOTYPE  LOCAL  DEFAULT    2 $d
+   135: 080017a8     0 NOTYPE  LOCAL  DEFAULT    2 $t
+   136: 080017d8     0 NOTYPE  LOCAL  DEFAULT    2 $d
+   137: 00000000     0 FILE    LOCAL  DEFAULT  ABS CTS_NVM_drv.c
+   138: 0800fc00     0 NOTYPE  LOCAL  DEFAULT    3 $d
+   139: 0800fc00   512 OBJECT  LOCAL  DEFAULT    3 ctsFrame
+   140: 00000000     0 FILE    LOCAL  DEFAULT  ABS 
+   141: 00000200     0 NOTYPE  LOCAL  DEFAULT  ABS _Min_Stack_Size
+   142: 20000284     0 NOTYPE  LOCAL  DEFAULT    5 __exidx_end
+   143: 20000284     0 NOTYPE  LOCAL  DEFAULT    5 __exidx_start
+   144: 00000000     0 NOTYPE  LOCAL  DEFAULT  ABS _Min_Heap_Size
+   145: 08000000     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   146: 08001475    24 FUNC    GLOBAL DEFAULT    2 TERM_Lib_Init
+   147: 080001d1   136 FUNC    GLOBAL DEFAULT    2 hw_GPIO_TOUCH_Init
+   148: 08000d01   154 FUNC    GLOBAL DEFAULT    2 GPIO_PinAFConfig
+   149: 08001829     2 FUNC    WEAK   DEFAULT    2 TIM1_CC_IRQHandler
+   150: 20000280     4 OBJECT  GLOBAL DEFAULT    5 TERM_PutByte
+   151: 08001829     2 FUNC    WEAK   DEFAULT    2 HardFault_Handler
+   152: 0800042d   208 FUNC    GLOBAL DEFAULT    2 RS232_PutByte
+   153: 08001829     2 FUNC    WEAK   DEFAULT    2 ADC1_COMP_IRQHandler
+   154: 08000a95    20 FUNC    GLOBAL DEFAULT    2 SysTick_Handler
+   155: 080008ed    96 FUNC    GLOBAL DEFAULT    2 SYSTIME_SetTimeout
+   156: 08000d9d   172 FUNC    GLOBAL DEFAULT    2 NVIC_Init
+   157: 08001829     2 FUNC    WEAK   DEFAULT    2 PVD_IRQHandler
+   158: 0800185c     0 NOTYPE  GLOBAL DEFAULT    2 _sidata
+   159: 08001829     2 FUNC    WEAK   DEFAULT    2 PendSV_Handler
+   160: 08001829     2 FUNC    WEAK   DEFAULT    2 NMI_Handler
+   161: 08001829     2 FUNC    WEAK   DEFAULT    2 I2C1_IRQHandler
+   162: 08000821    32 FUNC    GLOBAL DEFAULT    2 SYSTIME_Init
+   163: 2000004c    20 OBJECT  GLOBAL DEFAULT    5 RS232_TX_Buffer
+   164: 08001515   132 FUNC    GLOBAL DEFAULT    2 TERM_PutBin
+   165: 0800185c     0 NOTYPE  GLOBAL DEFAULT    2 _etext
+   166: 20000018     0 NOTYPE  GLOBAL DEFAULT    5 _sbss
+   167: 0800fc00     0 NOTYPE  GLOBAL DEFAULT    3 _sconfig
+   168: 080016fd    28 FUNC    GLOBAL DEFAULT    2 TERM_PutByte_Helper
+   169: 080014f1    36 FUNC    GLOBAL DEFAULT    2 TERM_PutLine
+   170: 20000014     4 OBJECT  GLOBAL DEFAULT    4 SystemCoreClock
+   171: 080000c5   136 FUNC    GLOBAL HIDDEN     2 __udivsi3
+   172: 08001051    60 FUNC    GLOBAL DEFAULT    2 RCC_APB2PeriphClockCmd
+   173: 08000bb1   310 FUNC    GLOBAL DEFAULT    2 GPIO_Init
+   174: 20000000     0 NOTYPE  GLOBAL DEFAULT    4 _sdata
+   175: 08001829     2 FUNC    WEAK   DEFAULT    2 SPI1_IRQHandler
+   176: 08001829     2 FUNC    WEAK   DEFAULT    2 TIM6_DAC_IRQHandler
+   177: 0800108d    60 FUNC    GLOBAL DEFAULT    2 RCC_APB1PeriphClockCmd
+   178: 08001719   144 FUNC    GLOBAL DEFAULT    2 sign_of_life
+   179: 0800148d   100 FUNC    GLOBAL DEFAULT    2 TERM_PutString
+   180: 08001015    60 FUNC    GLOBAL DEFAULT    2 RCC_AHBPeriphClockCmd
+   181: 08001829     2 FUNC    WEAK   DEFAULT    2 EXTI2_3_IRQHandler
+   182: 08001829     2 FUNC    WEAK   DEFAULT    2 I2C2_IRQHandler
+   183: 08001829     2 FUNC    WEAK   DEFAULT    2 TIM17_IRQHandler
+   184: 08001829     2 FUNC    WEAK   DEFAULT    2 RTC_IRQHandler
+   185: 20000284     0 NOTYPE  GLOBAL DEFAULT    5 _ebss
+   186: 080012ad   178 FUNC    GLOBAL DEFAULT    2 USART_GetITStatus
+   187: 080017dd    52 FUNC    WEAK   DEFAULT    2 Reset_Handler
+   188: 08000ce9    22 FUNC    GLOBAL DEFAULT    2 GPIO_ReadInputData
+   189: 08000661   228 FUNC    GLOBAL DEFAULT    2 hw_RS232_Set_Baudrate
+   190: 08000165   106 FUNC    GLOBAL DEFAULT    2 hw_DAC_Init
+   191: 08000e49   460 FUNC    GLOBAL DEFAULT    2 RCC_GetClocksFreq
+   192: 08001829     2 FUNC    WEAK   DEFAULT    2 TIM16_IRQHandler
+   193: 080010c9   352 FUNC    GLOBAL DEFAULT    2 USART_Init
+   194: 20000060    20 OBJECT  GLOBAL DEFAULT    5 RS232_RX_Buffer
+   195: 08001829     2 FUNC    WEAK   DEFAULT    2 TIM3_IRQHandler
+   196: 08001829     2 FUNC    WEAK   DEFAULT    2 EXTI4_15_IRQHandler
+   197: 08001829     2 FUNC    WEAK   DEFAULT    2 RCC_IRQHandler
+   198: 20000000     4 OBJECT  GLOBAL DEFAULT    4 p_Usart_Port
+   199: 080004fd    80 FUNC    GLOBAL DEFAULT    2 _RS232_RXInterrupt
+   200: 20000018     0 NOTYPE  GLOBAL DEFAULT    5 _bss
+   201: 08001829     2 FUNC    WEAK   DEFAULT    2 DMA1_Channel1_IRQHandler
+   202: 08001828     2 NOTYPE  GLOBAL DEFAULT    2 Default_Handler
+   203: 08000745   112 FUNC    GLOBAL DEFAULT    2 hw_RS232_Setup_Interrupts
+   204: 08001829     2 FUNC    WEAK   DEFAULT    2 CEC_IRQHandler
+   205: 08001829     2 FUNC    WEAK   DEFAULT    2 TIM14_IRQHandler
+   206: 08001229   132 FUNC    GLOBAL DEFAULT    2 USART_ITConfig
+   207: 08001829     2 FUNC    WEAK   DEFAULT    2 DMA1_Channel4_5_IRQHandle
+   208: 08000871   124 FUNC    GLOBAL DEFAULT    2 SYSTIME_GetTimeoutState
+   209: 08000b4d    52 FUNC    GLOBAL DEFAULT    2 DAC_SetChannel1Data
+   210: 08000841    48 FUNC    GLOBAL DEFAULT    2 SYSTIME_DelayMS
+   211: 08001829     2 FUNC    WEAK   DEFAULT    2 TIM15_IRQHandler
+   212: 08001829     2 FUNC    WEAK   DEFAULT    2 EXTI0_1_IRQHandler
+   213: 08000161     2 FUNC    WEAK   HIDDEN     2 __aeabi_ldiv0
+   214: 20000274     4 OBJECT  GLOBAL DEFAULT    5 hw_RX_Interrupt_Callback
+   215: 080005b1   176 FUNC    GLOBAL DEFAULT    2 hw_RS232_Init
+   216: 08001829     2 FUNC    WEAK   DEFAULT    2 SPI2_IRQHandler
+   217: 08000259   164 FUNC    GLOBAL DEFAULT    2 RS232_Init
+   218: 08001599   356 FUNC    GLOBAL DEFAULT    2 main
+   219: 2000027c     4 OBJECT  GLOBAL DEFAULT    5 hw_SYSTIME_IRQCallback
+   220: 080000c5     0 FUNC    GLOBAL HIDDEN     2 __aeabi_uidiv
+   221: 08001829     2 FUNC    WEAK   DEFAULT    2 SVC_Handler
+   222: 20000074   256 OBJECT  GLOBAL DEFAULT    5 RS232_TX_Buffer_Mem
+   223: 08001361   140 FUNC    GLOBAL DEFAULT    2 SystemInit
+   224: 0800fe00     0 NOTYPE  GLOBAL DEFAULT    3 _econfig
+   225: 080017a9    52 FUNC    GLOBAL DEFAULT    2 setDACLevel
+   226: 08001829     2 FUNC    WEAK   DEFAULT    2 TS_IRQHandler
+   227: 08001829     2 FUNC    WEAK   DEFAULT    2 WWDG_IRQHandler
+   228: 20000000     0 NOTYPE  GLOBAL DEFAULT    4 _data
+   229: 08001829     2 FUNC    WEAK   DEFAULT    2 TIM2_IRQHandler
+   230: 20000278     4 OBJECT  GLOBAL DEFAULT    5 hw_TX_Interrupt_Callback
+   231: 08001829     2 FUNC    WEAK   DEFAULT    2 DMA1_Channel2_3_IRQHandle
+   232: 20001000     0 NOTYPE  GLOBAL DEFAULT  ABS _estack
+   233: 0800014d    18 FUNC    GLOBAL HIDDEN     2 __aeabi_uidivmod
+   234: 20000018     0 NOTYPE  GLOBAL DEFAULT    4 _edata
+   235: 08000b81    48 FUNC    GLOBAL DEFAULT    2 DAC_GetDataOutputValue
+   236: 08000a45    80 FUNC    GLOBAL DEFAULT    2 hw_SYSTIME_Init
+   237: 08000b01    76 FUNC    GLOBAL DEFAULT    2 DAC_Cmd
+   238: 20000174   256 OBJECT  GLOBAL DEFAULT    5 RS232_RX_Buffer_Mem
+   239: 08000aa9    88 FUNC    GLOBAL DEFAULT    2 DAC_Init
+   240: 08001829     2 FUNC    WEAK   DEFAULT    2 USART2_IRQHandler
+   241: 08000000     0 OBJECT  GLOBAL DEFAULT    1 g_pfnVectors
+   242: 0800094d    24 FUNC    GLOBAL DEFAULT    2 SYSTIME_IRQHandler
+   243: 08000161     2 FUNC    WEAK   HIDDEN     2 __aeabi_idiv0
+   244: 08001829     2 FUNC    WEAK   DEFAULT    2 FLASH_IRQHandler
+   245: 080007b5   108 FUNC    GLOBAL DEFAULT    2 USART1_IRQHandler
+   246: 08001829     2 FUNC    WEAK   DEFAULT    2 TIM1_BRK_UP_TRG_COM_IRQHa
+   247: 080002fd   304 FUNC    GLOBAL DEFAULT    2 RS232_Config
+   248: 0800054d   100 FUNC    GLOBAL DEFAULT    2 _RS232_TXInterrupt
+
+No version information found in this file.
+Attribute Section: aeabi
+File Attributes
+  Tag_CPU_name: "Cortex-M0"
+  Tag_CPU_arch: v6S-M
+  Tag_CPU_arch_profile: Microcontroller
+  Tag_THUMB_ISA_use: Thumb-1
+  Tag_ABI_PCS_wchar_t: 4
+  Tag_ABI_FP_denormal: Needed
+  Tag_ABI_FP_exceptions: Needed
+  Tag_ABI_FP_number_model: IEEE 754
+  Tag_ABI_align_needed: 8-byte
+  Tag_ABI_enum_size: small
+  Tag_ABI_optimization_goals: Aggressive Debug

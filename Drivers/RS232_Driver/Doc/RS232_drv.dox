@@ -1,0 +1,46 @@
+/**
+
+@defgroup RS232_drv RS232 Driver
+@brief   Generic RS232 Driver
+@details 
+
+   Interrupt based RS232 implementation. This implementation uses a
+   seperate RX and TX buffer, which are filles/emptied using interrupts.
+   Relies on a lower level hardware implementation (hw_RS232_drv.h)
+   
+@section file_list File List 
+
+- RS232 Driver Source [ RS232_drv.c ]
+- RS232 Driver Header [ RS232_drv.h ]
+
+@section hal_device_driver_diagram Diagram
+@dot
+digraph example {
+  graph [size="10, 10", pad="1.5, 0", splines=curved, splines=true];
+  node [shape=oval, fontname=Helvetica, fontsize=8,
+        fixedsize="true", width="1.5", height="0.6"];
+  edge [fontname=Helvetica, fontsize=8];
+
+  rx_buff   [label="RX Buffer"];
+  tx_buff   [label="TX Buffer"];
+  rx_irq    [label="RX IRQ"];
+  tx_irq    [label="TX IRQ"];
+  hardware  [label="RS232 Harware"];
+  RS232_rd  [label="RS232_drv Read"];
+  RS232_wr  [label="RS232_drv Write"];
+  app       [label="Application"];
+
+  hardware  ->  tx_irq [dir=both];
+  hardware  ->  rx_irq;
+  tx_buff   ->  tx_irq;
+  rx_irq    ->  rx_buff;
+  RS232_wr  ->  tx_buff;
+  rx_buff   ->  RS232_rd;
+  app       ->  RS232_wr;
+  RS232_rd  ->  app;
+  }
+@enddot
+
+
+ 
+*/
