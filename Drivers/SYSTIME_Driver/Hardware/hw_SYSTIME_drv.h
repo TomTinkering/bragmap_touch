@@ -28,7 +28,7 @@
 //Includes
 #include "Global.h"
 #include "HardwareConfig.h"
-#include "stm32f0xx.h"
+#include "stm32f10x.h"
 
 #ifndef HW_SYSTIME_DRV_H_
 	#define HW_SYSTIME_DRV_H_

@@ -1,0 +1,5 @@
+http://takenapart.com/?p=82
+http://snowcap.fi/blog/2011/11/21/the-cheapest-sw-dongle-stm32-f1-discovery/
+http://www.avrfreaks.net/index.php?name=PNphpBB2&file=viewtopic&t=101700&start=0&postdays=0&postorder=asc&highlight=
+https://gitorious.org/stm32flash/pages/Home
+http://gostm32.blogspot.co.nz/2010/09/better-program-for-bootloader.html

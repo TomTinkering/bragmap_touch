@@ -27,7 +27,7 @@
 #include "Global.h"
 #include "TERM_Lib.h"
 #include <string.h>
-#include "stm32f0xx_flash.h"
+#include "stm32f10x_flash.h"
 
 #ifndef HW_STM32F0_FLASH_DRV_H_
 	#define HW_STM32F0_FLASH_DRV_H_

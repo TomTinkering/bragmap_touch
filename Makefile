@@ -2,33 +2,47 @@ MAKE_DIR = $(notdir $(shell pwd))
 
 #  Project Settings
 PROJECT=BragMap_Touch
-ISYSTEM_INC_DIR = /usr/arm-none-eabi/include
-LINKER_SCRIPT = Drivers/STM32F0_Discovery/stm32f0xx_flash.ld
+ISYSTEM_INC_DIR = /opt/arm-none-eabi/arm-none-eabi/include/
+LINKER_SCRIPT = Drivers/STM32F1x/system/stm32f10x_flash.ld
+TARGET_FAM = STM32F10X_MD
+
+#  Compiler/Assembler/Linker Paths
+GCC = arm-none-eabi-gcc
+AS = arm-none-eabi-as
+LD = arm-none-eabi-ld
+AR = arm-none-eabi-ar
+RANLIB = arm-none-eabi-ranlib
+OBJCOPY = arm-none-eabi-objcopy
+OBJDUMP = arm-none-eabi-objdump
+REMOVE = rm -f
+SIZE = arm-none-eabi-size
+READELF = arm-none-eabi-readelf -a
 
 # list all include directories here
-INCLUDE_DIRS = Drivers/RS232_Driver/ Drivers/RS232_Driver/Hardware/
-INCLUDE_DIRS += Drivers/DAC_Driver/ Drivers/DAC_Driver/Hardware/
-INCLUDE_DIRS += Drivers/GPIO_Touch_Driver/ Drivers/GPIO_Touch_Driver/Hardware/
-INCLUDE_DIRS += Drivers/SYSTIME_Driver/ Drivers/SYSTIME_Driver/Hardware/
-INCLUDE_DIRS += Drivers/STM32F0_Discovery/ Drivers/STM32F0_Discovery/Hardware/
-INCLUDE_DIRS += Drivers/CTS_NVM_Driver/ Drivers/CTS_NVM_Driver/Hardware/ 
-INCLUDE_DIRS += Drivers/STM32F0_Discovery/std_per_drv/inc/ Drivers/STM32F0_Discovery/cmsis/
+INCLUDE_DIRS = Drivers/STM32F1x/peripherals/inc/ Drivers/STM32F1x/
+INCLUDE_DIRS += Drivers/STM32F1x/cmsis/ Drivers/STM32F1x/system/
+#INCLUDE_DIRS = Drivers/RS232_Driver/ Drivers/RS232_Driver/Hardware/
+#INCLUDE_DIRS += Drivers/DAC_Driver/ Drivers/DAC_Driver/Hardware/
+#INCLUDE_DIRS += Drivers/GPIO_Touch_Driver/ Drivers/GPIO_Touch_Driver/Hardware/
+#INCLUDE_DIRS += Drivers/SYSTIME_Driver/ Drivers/SYSTIME_Driver/Hardware/
+#INCLUDE_DIRS += Drivers/CTS_NVM_Driver/ Drivers/CTS_NVM_Driver/Hardware/ 
 INCLUDE_DIRS += Libs/TERM_Lib/ ./ Drivers/ Libs/
 INCLUDE_DIRS += Application/inc/ Application/
 
 # list all c and c++ source directories here
-SRC_DIRS =  Drivers/CTS_NVM_Driver/ Drivers/CTS_NVM_Driver/Hardware/
-SRC_DIRS += Drivers/DAC_Driver/ Drivers/DAC_Driver/Hardware/
-SRC_DIRS += Drivers/GPIO_Touch_Driver/ Drivers/GPIO_Touch_Driver/Hardware/
-SRC_DIRS += Drivers/RS232_Driver/ Drivers/RS232_Driver/Hardware/
-SRC_DIRS += Drivers/SYSTIME_Driver/ Drivers/SYSTIME_Driver/Hardware/
-SRC_DIRS += Drivers/STM32F0_Discovery/ Drivers/STM32F0_Discovery/Hardware/ 
-SRC_DIRS += Drivers/STM32F0_Discovery/std_per_drv/src/ 
+
+SRC_DIRS = Drivers/STM32F1x/peripherals/src/ Drivers/STM32F1x/
+SRC_DIRS += Drivers/STM32F1x/cmsis/ Drivers/STM32F1x/system/
+#SRC_DIRS = Drivers/DAC_Driver/ Drivers/DAC_Driver/Hardware/
+#SRC_DIRS += Drivers/GPIO_Touch_Driver/ Drivers/GPIO_Touch_Driver/Hardware/
+#SRC_DIRS += Drivers/RS232_Driver/ Drivers/RS232_Driver/Hardware/
+#SRC_DIRS += Drivers/CTS_NVM_Driver/ Drivers/CTS_NVM_Driver/Hardware/
+#SRC_DIRS += Drivers/SYSTIME_Driver/ Drivers/SYSTIME_Driver/Hardware/
 SRC_DIRS += Libs/TERM_Lib/ ./ Drivers/ Libs/
 SRC_DIRS += Application/inc/ Application/
 
 # list all assembly source directories here
-ASM_DIRS = Drivers/STM32F0_Discovery/std_per_drv/src/ 
+ASM_DIRS = Drivers/STM32F1x/peripherals/src/
 
 #generate lists of source files based on directory listings
 C_SRC = $(wildcard $(addsuffix *.c,$(SRC_DIRS))) 
@@ -56,34 +70,22 @@ vpath %.o
 DEBUGFLAGS = -O0 -g -gstabs+
 
 #  Compiler Options
-GCFLAGS = -isystem $(ISYSTEM_INC_DIR) -mthumb -mcpu=cortex-m0 -fno-builtin -Wall -std=gnu99 -fdata-sections -ffunction-sections
-GCFLAGS += -DSTM32F0xx -DUSE_STDPERIPH_DRIVER $(DEBUGFLAGS)
+GCFLAGS = -isystem $(ISYSTEM_INC_DIR) -mthumb -mcpu=cortex-m3 -fno-builtin -Wall -std=gnu99 -fdata-sections -ffunction-sections
+GCFLAGS += -D$(TARGET_FAM) -DUSE_STDPERIPH_DRIVER $(DEBUGFLAGS)
 
 # define any directories containing header files other than /usr/include
 INCLUDES = $(addprefix -I,$(INCLUDE_DIRS)) 
 
 #  Linker Options
 LDFLAGS = -isystem $(ISYSTEM_INC_DIR)
-LDFLAGS += -mthumb -mcpu=cortex-m0 -nostartfiles -fno-builtin -Wall -std=gnu99 -fdata-sections -ffunction-sections 
-LDFLAGS += -DSTM32F0xx $(DEBUGFLAGS)
+LDFLAGS += -mthumb -mcpu=cortex-m3 -nostartfiles -fno-builtin -Wall -std=gnu99 -fdata-sections -ffunction-sections 
+LDFLAGS += -D$(TARGET_FAM) $(DEBUGFLAGS)
 LDFLAGS += -T$(LINKER_SCRIPT) -Wl,-static -Wl,--gc-sections 
 
 LDINCLUDES = 
 LDLIBS = 
 
-ASFLAGS = -mthumb -mcpu=cortex-m0 -g -gstabs+
-
-#  Compiler/Assembler/Linker Paths
-GCC = arm-none-eabi-gcc
-AS = arm-none-eabi-as
-LD = arm-none-eabi-ld
-AR = arm-none-eabi-ar
-RANLIB = arm-none-eabi-ranlib
-OBJCOPY = arm-none-eabi-objcopy
-OBJDUMP = arm-none-eabi-objdump
-REMOVE = rm -f
-SIZE = arm-none-eabi-size
-READELF = arm-none-eabi-readelf -a
+ASFLAGS = -mthumb -mcpu=cortex-m3 -g -gstabs+ -x assembler-with-cpp
 
 #########################################################################
 

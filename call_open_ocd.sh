@@ -1,6 +1,6 @@
 #settings
-PROJECT_CFG=/home/tomv/workspace/BragMap_Touch/Drivers/STM32F0_Discovery/stm32f0_discovery.cfg
-PROJECT_HEX=/home/tomv/workspace/BragMap_Touch/Build/BragMap_Touch.hex
+PROJECT_CFG=/home/tomv/workspace/bragmap_touch/Drivers/STM32F0_Discovery/stm32f0_discovery.cfg
+PROJECT_HEX=/home/tomv/workspace/bragmap_touch/Build/BragMap_Touch.hex
 
 # find PIDs of all openocd instances
 OPENOCD_PID=$(ps aux | grep '[o]penocd' | awk '{print $2}')

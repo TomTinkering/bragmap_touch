@@ -14,10 +14,10 @@
 //Includes
 #include "Global.h"
 #include "HardwareConfig.h"
-#include "stm32f0xx.h"
-#include "stm32f0xx_dac.h"
-#include "stm32f0xx_rcc.h"
-#include "stm32f0xx_gpio.h"
+#include "stm32f10x.h"
+#include "stm32f10x_dac.h"
+#include "stm32f10x_rcc.h"
+#include "stm32f10x_gpio.h"
 
 
 #ifndef __DAC_DRV_STM32F05XX_H
