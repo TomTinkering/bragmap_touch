@@ -1,6 +1,6 @@
 #settings
 PROJECT_CFG=/home/tomv/workspace/bragmap_touch/Drivers/STM32F0_Discovery/stm32f0_discovery.cfg
-PROJECT_HEX=/home/tomv/workspace/bragmap_touch/Build/BragMap_Touch.hex
+PROJECT_HEX=/home/tomv/workspace/bragmap_touch/Build/bragmap_touch.hex
 
 # find PIDs of all openocd instances
 OPENOCD_PID=$(ps aux | grep '[o]penocd' | awk '{print $2}')
@@ -33,10 +33,10 @@ fi
 #call openocd
 if [ $OPENOCD_MODE == "FLASH" ]
 	then 
-		echo "calling openocd in FLASH mode"
+		echo "calling openocd as:$USER -> in FLASH mode" 
 		openocd -f $PROJECT_CFG -c "program $PROJECT_HEX verify reset"
-	else 
-		echo "calling openocd in DEBUG mode"		
+	else
+		echo "calling openocd as:$USER -> in FLASH mode" 		
 		openocd -f $PROJECT_CFG -c init -c "reset init" -c halt
 fi
 

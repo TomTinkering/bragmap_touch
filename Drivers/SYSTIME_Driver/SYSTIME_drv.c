@@ -114,7 +114,7 @@ void SYSTIME_IRQHandler(void)
 {
 	g_sys_time++; //increment system tick counter
 
-	//TODO: Implemenet period tasks?
+	//TODO: Implement period tasks?
 	return;
 }
 

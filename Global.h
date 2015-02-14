@@ -27,6 +27,7 @@
   //*******************************************************************
   //Global Includes
   #include <stdint.h>
+  #include "TERM_Lib.h"
 
 #ifndef __GLOBALLIB_H
   #define __GLOBALLIB_H
@@ -61,6 +62,9 @@
     #define DEBUG_DECIMAL(VAL,LEN)  do{}while(0)
   #endif
 
+
+  //set/reset value to toggle stm32f0 board led's
+  #define BSRR_VAL        0x0300
 
   //*******************************************************************
   //Typedefs

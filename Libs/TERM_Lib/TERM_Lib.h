@@ -27,7 +27,7 @@
 
 //*******************************************************************
 //Includes
-#include "Global.h"
+#include <stdint.h>
 
 #ifndef TERM_LIB_H_
 	#define TERM_LIB_H_

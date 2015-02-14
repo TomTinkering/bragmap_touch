@@ -88,7 +88,7 @@ rs232_err_t RS232_Init(void)
     HW_RS232_INIT();
 
     //set default baudrate/databits/parity/stopbits
-    result = RS232_Config(  9600, 8, 'N', 1 );
+    result = RS232_Config(  115200, 8, 'N', 1 );
 
     //Setup UART interrrupts
     HW_RS232_SETUP_INTERRUPTS(&_RS232_RXInterrupt,&_RS232_TXInterrupt);

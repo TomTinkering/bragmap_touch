@@ -89,7 +89,7 @@ void hw_SYSTIME_DelayUS(uint16_t us)
 /** *******************************************************************
   * @brief   STM32 SysTick interrupt. Calls IRQ callback every ms
 ***********************************************************************/
-void SysTick_Handler(void) // UART6 Interrupt handler
+void SysTick_Handler(void) // Interrupt handler
 {
 	//perform higher level callback functions
 	hw_SYSTIME_IRQCallback();
